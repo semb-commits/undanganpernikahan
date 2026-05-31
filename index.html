@@ -8,45 +8,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
+  :root{
+    --gold:#d4af37;
+    --dark-gold:#8b6f47;
+    --brown:#5c4a36;
+    --cream:#f5f1eb;
+    --text:#3d352e;
+  }
+  
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Poppins',sans-serif;color:#333;background:#fffdfb;text-align:center}
+  body{
+    font-family:'Poppins',sans-serif;color:var(--text);
+    background:var(--cream);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns=N/A%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 13c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm77-26c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM94 0c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zm0 50c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zM32 49c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zm57 13c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zm-9-21c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zM60 0c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7z' fill='%23d4af37' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+    text-align:center
+  }
   h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
   
-  .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('https://i.postimg.cc/VvkSwsSM/foto1.jpg') center/cover no-repeat;
-    color:#fff;padding:20px}
-  .hero h2{font-size:1rem;font-weight:300;letter-spacing:3px;margin-bottom:10px}
-  .hero h1{font-size:3.2rem;margin:10px 0}
+  .hero{
+    height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    background:linear-gradient(rgba(60,50,40,0.6),rgba(60,50,40,0.6)), 
+               url('https://i.postimg.cc/VvkSwsSM/foto1.jpg') center/cover no-repeat;
+    color:#fff;padding:20px;border-bottom:4px solid var(--gold)
+  }
+  .hero h2{font-size:1rem;font-weight:300;letter-spacing:4px;margin-bottom:10px}
+  .hero h1{font-size:3.5rem;margin:10px 0;color:var(--gold)}
   .hero p{font-size:1rem;line-height:1.7;margin:15px 0}
-  .btn{display:inline-block;padding:14px 32px;background:#8b6f47;color:#fff;text-decoration:none;border-radius:50px;margin-top:20px;transition:0.3s}
-  .btn:hover{background:#6f5939}
+  .btn{
+    display:inline-block;padding:14px 36px;background:var(--gold);color:#fff;
+    text-decoration:none;border-radius:50px;margin-top:20px;transition:0.3s;
+    box-shadow:0 4px 15px rgba(212,175,55,0.3)
+  }
+  .btn:hover{background:var(--dark-gold);transform:translateY(-2px)}
   
-  .section{padding:80px 20px;max-width:900px;margin:auto}
-  .section h2{font-size:2.2rem;margin-bottom:15px;color:#8b6f47}
-  .section p{font-size:1rem;line-height:1.8;margin-bottom:8px}
-  .divider{width:60px;height:2px;background:#8b6f47;margin:40px auto}
+  .section{padding:90px 20px;max-width:900px;margin:auto;position:relative}
+  .section h2{font-size:2.4rem;margin-bottom:15px;color:var(--dark-gold)}
+  .section p{font-size:1rem;line-height:1.9;margin-bottom:8px}
   
-  .couple{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:wrap;margin:50px 0}
-  .couple img{width:180px;height:180px;object-fit:cover;border-radius:50%;border:5px solid #f0e6dd}
-  .couple h3{font-size:1.8rem;margin:10px 0;color:#8b6f47}
+  .ornament{
+    width:120px;height:30px;margin:40px auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 120 30'%3E%3Cpath d='M60 0 L70 10 L60 20 L50 10 Z M30 15 L40 10 L30 5 L20 10 Z M90 15 L100 10 L90 5 L80 10 Z' fill='%23d4af37'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:center;background-size:contain
+  }
   
-  .countdown{display:flex;justify-content:center;gap:15px;margin:30px 0;flex-wrap:wrap}
-  .countdown div{background:#f0e6dd;padding:15px 20px;border-radius:12px;min-width:80px}
-  .countdown span{font-size:2rem;font-weight:700;color:#8b6f47;display:block}
-  .countdown small{font-size:0.8rem}
+  .couple{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;margin:50px 0}
+  .couple img{
+    width:190px;height:190px;object-fit:cover;border-radius:50%;
+    border:6px solid var(--gold);box-shadow:0 8px 25px rgba(0,0,0,0.15)
+  }
+  .couple h3{font-size:1.9rem;margin:12px 0;color:var(--dark-gold)}
   
-  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:40px}
-  .gallery img{width:100%;height:250px;object-fit:cover;border-radius:12px}
+  .countdown{display:flex;justify-content:center;gap:15px;margin:35px 0;flex-wrap:wrap}
+  .countdown div{
+    background:#fff;padding:18px 22px;border-radius:12px;min-width:85px;
+    border:2px solid var(--gold);box-shadow:0 5px 15px rgba(0,0,0,0.08)
+  }
+  .countdown span{font-size:2.2rem;font-weight:700;color:var(--dark-gold);display:block}
+  .countdown small{font-size:0.8rem;color:var(--brown)}
   
-  .map{width:100%;height:280px;border:0;border-radius:12px;margin-top:20px}
+  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:40px}
+  .gallery img{
+    width:100%;height:260px;object-fit:cover;border-radius:12px;
+    border:3px solid var(--gold);transition:0.3s
+  }
+  .gallery img:hover{transform:scale(1.03)}
+  
+  .map{
+    width:100%;height:280px;border:0;border-radius:12px;margin-top:20px;
+    border:3px solid var(--gold)
+  }
+  
+  .footer-ornament{
+    margin-top:60px;padding-top:40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 200 40'%3E%3Cpath d='M100 0 Q120 20 100 40 Q80 20 100 0 M50 20 Q70 10 90 20 Q70 30 50 20 M150 20 Q170 10 190 20 Q170 30 150 20' fill='none' stroke='%23d4af37' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:center;background-size:200px 40px
+  }
   
   @media(max-width:600px){
-    .hero h1{font-size:2.4rem}
-    .couple{flex-direction:column}
+    .hero h1{font-size:2.6rem}
+    .couple{flex-direction:column;gap:30px}
     .gallery{grid-template-columns:1fr}
     .gallery img{height:200px}
-    .countdown div{min-width:70px;padding:12px 15px}
-    .countdown span{font-size:1.6rem}
+    .countdown div{min-width:75px;padding:14px 16px}
+    .countdown span{font-size:1.8rem}
   }
 </style>
 </head>
@@ -71,7 +115,7 @@
     Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau ciptakan di antara kami.
   </p>
   
-  <div class="divider" data-aos="fade-up"></div>
+  <div class="ornament" data-aos="fade-up"></div>
   
   <div class="couple">
     <div data-aos="fade-right">
@@ -79,7 +123,7 @@
       <h3>Sukma Afriansyah</h3>
       <p>Putra dari<br>Bapak Kasmani & Ibu Tukiyah</p>
     </div>
-    <h2 data-aos="zoom-in">&</h2>
+    <h2 data-aos="zoom-in" style="color:var(--gold)">&</h2>
     <div data-aos="fade-left">
       <img src="https://i.postimg.cc/DyWZPM1X/foto3.jpg" alt="Reni">
       <h3>Reni Kurniasari</h3>
@@ -87,7 +131,7 @@
     </div>
   </div>
   
-  <div class="divider" data-aos="fade-up"></div>
+  <div class="ornament" data-aos="fade-up"></div>
   
   <h2 data-aos="fade-up">Menuju Hari Bahagia</h2>
   <div class="countdown" id="countdown" data-aos="fade-up" data-aos-delay="100">
@@ -97,24 +141,24 @@
     <div><span id="seconds">00</span><small>Detik</small></div>
   </div>
   
-  <div class="divider" data-aos="fade-up"></div>
+  <div class="ornament" data-aos="fade-up"></div>
   
   <h2 data-aos="fade-up">Akad Nikah</h2>
   <p data-aos="fade-up" data-aos-delay="100">Sabtu, 16 Oktober 2025</p>
   <p data-aos="fade-up" data-aos-delay="200">09.00 WIB</p>
   
-  <h2 data-aos="fade-up" style="margin-top:40px">Resepsi</h2>
+  <h2 data-aos="fade-up" style="margin-top:45px">Resepsi</h2>
   <p data-aos="fade-up" data-aos-delay="100">Sabtu, 16 Oktober 2025</p>
   <p data-aos="fade-up" data-aos-delay="200">10.00 WIB - Selesai</p>
   
-  <div class="divider" data-aos="fade-up"></div>
+  <div class="ornament" data-aos="fade-up"></div>
   
   <h2 data-aos="fade-up">Lokasi Acara</h2>
   <p data-aos="fade-up" data-aos-delay="100">Tempat acara pernikahan</p>
   
   <iframe data-aos="fade-up" data-aos-delay="200"
     class="map" 
-    src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sid!2sid!4v1234567890!6m8!1m7!1sQcNb4prT5vgMrdNX6!2m2!1d-6.2!2d106.8!3f0!4f0!5f0.7820865974627469">
+    src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sid!2sid!4v1234567890">
   </iframe>
   
   <a href="https://maps.app.goo.gl/QcNb4prT5vgMrdNX6" target="_blank" class="btn" data-aos="fade-up" data-aos-delay="300">Buka di Google Maps</a>
@@ -125,23 +169,21 @@
     <img src="https://i.postimg.cc/hjP4zySQ/foto6.jpg" alt="" data-aos="fade-up" data-aos-delay="200">
   </div>
   
-  <div class="divider" data-aos="fade-up"></div>
+  <div class="footer-ornament" data-aos="fade-up"></div>
   <p data-aos="fade-up">Merupakan suatu kebahagiaan dan kehormatan bagi kami,<br>apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
-  <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.5rem">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+  <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.6rem;color:var(--dark-gold)">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
 </section>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({duration:1200, once:true, easing:'ease-out-cubic'});
 
-// Nama tamu dari URL
 const params = new URLSearchParams(window.location.search);
 const nama = params.get('untuk');
 if(nama){
   document.getElementById('nama-tamu').innerText = decodeURIComponent(nama.replace(/\+/g,' '));
 }
 
-// Countdown 15 hari dari sekarang
 const weddingDate = new Date();
 weddingDate.setDate(weddingDate.getDate() + 15);
 weddingDate.setHours(9,0,0,0);
@@ -151,7 +193,7 @@ function updateCountdown(){
   const distance = weddingDate.getTime() - now;
   
   if(distance < 0){
-    document.getElementById('countdown').innerHTML = "<h3>Acara Sedang Berlangsung</h3>";
+    document.getElementById('countdown').innerHTML = "<h3 style='color:var(--gold)'>Acara Sedang Berlangsung</h3>";
     return;
   }
   
@@ -164,4 +206,4 @@ updateCountdown();
 setInterval(updateCountdown,1000);
 </script>
 </body>
-  </html>
+ </html>
