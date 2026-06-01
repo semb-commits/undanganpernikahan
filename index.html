@@ -4,217 +4,171 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sukma & Reni Wedding</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
-  :root{
-    --gold:#d4af37;
-    --dark-gold:#8b6f47;
-    --brown:#5c4a36;
-    --cream:#f5f1eb;
-    --text:#3d352e;
-  }
-  
   *{margin:0;padding:0;box-sizing:border-box}
   body{
-    font-family:'Poppins',sans-serif;color:var(--text);
+    font-family:'Poppins',sans-serif;
     background:transparent;
-    text-align:center
-  }
-  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
-  
-  .hero{
-    height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-    background:linear-gradient(rgba(60,50,40,0.6),rgba(60,50,40,0.6)), 
-               url('https://i.postimg.cc/VvkSwsSM/foto1.jpg') center/cover no-repeat;
-    color:#fff;padding:20px;border-bottom:4px solid var(--gold)
-  }
-  .hero h2{font-size:1rem;font-weight:300;letter-spacing:4px;margin-bottom:10px}
-  .hero h1{font-size:3.5rem;margin:10px 0;color:var(--gold)}
-  .hero p{font-size:1rem;line-height:1.7;margin:15px 0}
-  .btn{
-    display:inline-block;padding:14px 36px;background:var(--gold);color:#fff;
-    text-decoration:none;border-radius:50px;margin-top:20px;transition:0.3s;
-    box-shadow:0 4px 15px rgba(212,175,55,0.3)
-  }
-  .btn:hover{background:var(--dark-gold);transform:translateY(-2px)}
-  
-  .section{padding:90px 20px;max-width:900px;margin:auto;position:relative;background:transparent}
-  .section h2{font-size:2.4rem;margin-bottom:15px;color:#fff}
-  .section p{font-size:1rem;line-height:1.9;margin-bottom:8px;color:#fff}
-  
-  .ornament{
-    width:120px;height:30px;margin:40px auto;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 120 30'%3E%3Cpath d='M60 0 L70 10 L60 20 L50 10 Z M30 15 L40 10 L30 5 L20 10 Z M90 15 L100 10 L90 5 L80 10 Z' fill='%23fff'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;background-position:center;background-size:contain
+    color:#fff;
+    text-align:center;
+    overflow-x:hidden;
   }
   
-  .couple{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;margin:50px 0}
-  .couple img{
-    width:190px;height:190px;object-fit:cover;border-radius:50%;
-    border:6px solid var(--gold);box-shadow:0 8px 25px rgba(0,0,0,0.15)
-  }
-  .couple h3{font-size:1.9rem;margin:12px 0;color:#fff}
-  .couple p{color:#ddd}
-  
-  .countdown{display:flex;justify-content:center;gap:15px;margin:35px 0;flex-wrap:wrap}
-  .countdown div{
-    background:rgba(255,255,255,0.1);padding:18px 22px;border-radius:12px;min-width:85px;
-    border:2px solid var(--gold);box-shadow:0 5px 15px rgba(0,0,0,0.3);backdrop-filter:blur(10px)
-  }
-  .countdown span{font-size:2.2rem;font-weight:700;color:var(--gold);display:block}
-  .countdown small{font-size:0.8rem;color:#ddd}
-  
-  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:40px}
-  .gallery img{
-    width:100%;height:260px;object-fit:cover;border-radius:12px;
-    border:3px solid var(--gold);transition:0.3s
-  }
-  .gallery img:hover{transform:scale(1.03)}
-  
-  .map{
-    width:100%;height:280px;border:0;border-radius:12px;margin-top:20px;
-    border:3px solid var(--gold)
-  }
-  
-  .footer-ornament{
-    margin-top:60px;padding-top:40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 200 40'%3E%3Cpath d='M100 0 Q120 20 100 40 Q80 20 100 0 M50 20 Q70 10 90 20 Q70 30 50 20 M150 20 Q170 10 190 20 Q170 30 150 20' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;background-position:center;background-size:200px 40px
-  }
-
-  .bottom-icon{
-    margin-top:50px;
+  .wrapper{
+    min-height:100vh;
+    padding:60px 20px;
     display:flex;
+    flex-direction:column;
     justify-content:center;
+    align-items:center;
+  }
+  
+  h1,h2{font-family:'Playfair Display',serif;font-weight:700}
+  
+  .names{
+    font-size:3.2rem;
+    color:#d4af37;
+    margin:20px 0;
+    line-height:1.2;
+  }
+  
+  .subtitle{
+    font-size:1rem;
+    letter-spacing:3px;
+    color:#ddd;
+    margin-bottom:30px;
+  }
+  
+  .date{
+    font-size:1.4rem;
+    color:#fff;
+    margin:20px 0;
+  }
+  
+  .couple-photo{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:4px solid #d4af37;
+    object-fit:cover;
+    margin:30px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  }
+  
+  .countdown{
+    display:flex;
+    gap:15px;
+    margin:40px 0;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .countdown div{
+    background:rgba(255,255,255,0.08);
+    padding:15px 20px;
+    border-radius:10px;
+    min-width:80px;
+    border:1px solid #d4af37;
+    backdrop-filter:blur(10px);
+  }
+  .countdown span{
+    font-size:2rem;
+    font-weight:700;
+    color:#d4af37;
+    display:block;
+  }
+  .countdown small{
+    font-size:0.8rem;
+    color:#ddd;
+  }
+  
+  .location{
+    margin:30px 0;
+    font-size:1rem;
+    color:#ddd;
+  }
+  
+  .btn{
+    display:inline-block;
+    padding:12px 32px;
+    background:#d4af37;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    margin-top:20px;
+    font-weight:500;
+    transition:0.3s;
+  }
+  .btn:hover{
+    background:#b8941f;
+    transform:translateY(-2px);
+  }
+  
+  .bottom-icon{
+    margin-top:60px;
   }
   
   @media(max-width:600px){
-    .hero h1{font-size:2.6rem}
-    .couple{flex-direction:column;gap:30px}
-    .gallery{grid-template-columns:1fr}
-    .gallery img{height:200px}
-    .countdown div{min-width:75px;padding:14px 16px}
-    .countdown span{font-size:1.8rem}
+    .names{font-size:2.4rem}
+    .couple-photo{width:180px;height:180px}
   }
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <h2 data-aos="fade-down">Yth.</h2>
-  <h1 id="nama-tamu" data-aos="fade-up" data-aos-delay="200">Tamu Undangan</h1>
-  <p data-aos="fade-up" data-aos-delay="400">
-    Dengan memohon rahmat dan ridho Allah SWT,<br>
-    kami bermaksud mengundang Bapak/Ibu/Saudara/i<br>
-    untuk hadir di acara pernikahan kami
-  </p>
-  <h1 data-aos="fade-up" data-aos-delay="600">Sukma & Reni</h1>
-  <a href="#detail" class="btn" data-aos="zoom-in" data-aos-delay="800">Buka Undangan</a>
-</section>
-
-<section id="detail" class="section">
-  <p data-aos="fade-up">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
-  <p data-aos="fade-up" data-aos-delay="100">
-    Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.<br>
-    Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau ciptakan di antara kami.
-  </p>
+<div class="wrapper">
+  <p class="subtitle" data-aos="fade-down">THE WEDDING OF</p>
   
-  <div class="ornament" data-aos="fade-up"></div>
+  <h1 class="names" data-aos="fade-up">Sukma & Reni</h1>
   
-  <div class="couple">
-    <div data-aos="fade-right">
-      <img src="https://i.postimg.cc/qqvtrBt8/foto2.jpg" alt="Sukma">
-      <h3>Sukma Afriansyah</h3>
-      <p>Putra dari<br>Bapak Kasmani & Ibu Tukiyah</p>
-    </div>
-    <h2 data-aos="zoom-in" style="color:var(--gold)">&</h2>
-    <div data-aos="fade-left">
-      <img src="https://i.postimg.cc/DyWZPM1X/foto3.jpg" alt="Reni">
-      <h3>Reni Kurniasari</h3>
-      <p>Putri dari<br>Bapak Samiden & Alm. Ibu Sakinah</p>
-    </div>
-  </div>
+  <p class="date" data-aos="fade-up" data-aos-delay="200">16 Oktober 2025</p>
   
-  <div class="ornament" data-aos="fade-up"></div>
+  <!-- Ganti link foto ini -->
+  <img src="https://i.postimg.cc/qqvtrBt8/foto2.jpg" alt="Couple" class="couple-photo" data-aos="zoom-in" data-aos-delay="300">
   
-  <h2 data-aos="fade-up">Menuju Hari Bahagia</h2>
-  <div class="countdown" id="countdown" data-aos="fade-up" data-aos-delay="100">
+  <div class="countdown" id="countdown" data-aos="fade-up" data-aos-delay="400">
     <div><span id="days">00</span><small>Hari</small></div>
     <div><span id="hours">00</span><small>Jam</small></div>
     <div><span id="minutes">00</span><small>Menit</small></div>
     <div><span id="seconds">00</span><small>Detik</small></div>
   </div>
   
-  <div class="ornament" data-aos="fade-up"></div>
+  <p class="location" data-aos="fade-up" data-aos-delay="500">
+    Gedung Serbaguna Bahagia<br>
+    Jakarta Selatan
+  </p>
   
-  <h2 data-aos="fade-up">Akad Nikah</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Sabtu, 16 Oktober 2025</p>
-  <p data-aos="fade-up" data-aos-delay="200">09.00 WIB</p>
+  <a href="https://maps.app.goo.gl/QcNb4prT5vgMrdNX6" target="_blank" class="btn" data-aos="fade-up" data-aos-delay="600">Buka Lokasi</a>
   
-  <h2 data-aos="fade-up" style="margin-top:45px">Resepsi</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Sabtu, 16 Oktober 2025</p>
-  <p data-aos="fade-up" data-aos-delay="200">10.00 WIB - Selesai</p>
-  
-  <div class="ornament" data-aos="fade-up"></div>
-  
-  <h2 data-aos="fade-up">Lokasi Acara</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Tempat acara pernikahan</p>
-  
-  <iframe data-aos="fade-up" data-aos-delay="200"
-    class="map" 
-    src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sid!2sid!4v1234567890">
-  </iframe>
-  
-  <a href="https://maps.app.goo.gl/QcNb4prT5vgMrdNX6" target="_blank" class="btn" data-aos="fade-up" data-aos-delay="300">Buka di Google Maps</a>
-  
-  <div class="gallery">
-    <img src="https://i.postimg.cc/3JyRFc2D/foto4.jpg" alt="" data-aos="fade-up">
-    <img src="https://i.postimg.cc/KzvckqZk/foto5.jpg" alt="" data-aos="fade-up" data-aos-delay="100">
-    <img src="https://i.postimg.cc/hjP4zySQ/foto6.jpg" alt="" data-aos="fade-up" data-aos-delay="200">
-  </div>
-  
-  <div class="footer-ornament" data-aos="fade-up"></div>
-  <p data-aos="fade-up">Merupakan suatu kebahagiaan dan kehormatan bagi kami,<br>apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
-  <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.6rem;color:var(--gold)">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
-
   <!-- Icon SVG transparan di bawah -->
-  <div class="bottom-icon" data-aos="fade-up" data-aos-delay="200">
-    <svg width="160" height="100" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="80" cy="45" r="40" stroke="#fff" stroke-width="4" fill="none"/>
-      <g fill="#fff">
-        <circle cx="66" cy="40" r="9"/>
-        <circle cx="94" cy="40" r="9"/>
-        <path d="M66 50 Q66 62 80 62 Q94 62 94 50" stroke="#fff" stroke-width="3" fill="none"/>
+  <div class="bottom-icon" data-aos="fade-up" data-aos-delay="700">
+    <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="40" r="35" stroke="#d4af37" stroke-width="3" fill="none"/>
+      <g fill="#d4af37">
+        <circle cx="58" cy="35" r="8"/>
+        <circle cx="82" cy="35" r="8"/>
+        <path d="M58 45 Q58 55 70 55 Q82 55 82 45" stroke="#d4af37" stroke-width="2" fill="none"/>
       </g>
-      <text x="80" y="78" text-anchor="middle" fill="#fff" font-family="Poppins" font-size="12" font-weight="500">
+      <text x="70" y="70" text-anchor="middle" fill="#d4af37" font-family="Poppins" font-size="11" font-weight="500">
         Sukma & Reni
       </text>
     </svg>
   </div>
-</section>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({duration:1200, once:true, easing:'ease-out-cubic'});
 
-const params = new URLSearchParams(window.location.search);
-const nama = params.get('untuk');
-if(nama){
-  document.getElementById('nama-tamu').innerText = decodeURIComponent(nama.replace(/\+/g,' '));
-}
-
-const weddingDate = new Date();
-weddingDate.setDate(weddingDate.getDate() + 15);
-weddingDate.setHours(9,0,0,0);
+const weddingDate = new Date('2025-10-16T09:00:00');
 
 function updateCountdown(){
   const now = new Date().getTime();
   const distance = weddingDate.getTime() - now;
   
   if(distance < 0){
-    document.getElementById('countdown').innerHTML = "<h3 style='color:var(--gold)'>Acara Sedang Berlangsung</h3>";
+    document.getElementById('countdown').innerHTML = "<h3 style='color:#d4af37'>Acara Sedang Berlangsung</h3>";
     return;
   }
   
