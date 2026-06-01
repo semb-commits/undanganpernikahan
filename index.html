@@ -19,8 +19,7 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{
     font-family:'Poppins',sans-serif;color:var(--text);
-    background:var(--cream);
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns=N/A%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 13c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm77-26c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM94 0c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zm0 50c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zM32 49c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zm57 13c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zm-9-21c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7zM60 0c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7 3.134-7 7-7z' fill='%23d4af37' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background:transparent;
     text-align:center
   }
   h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
@@ -41,13 +40,13 @@
   }
   .btn:hover{background:var(--dark-gold);transform:translateY(-2px)}
   
-  .section{padding:90px 20px;max-width:900px;margin:auto;position:relative}
-  .section h2{font-size:2.4rem;margin-bottom:15px;color:var(--dark-gold)}
-  .section p{font-size:1rem;line-height:1.9;margin-bottom:8px}
+  .section{padding:90px 20px;max-width:900px;margin:auto;position:relative;background:transparent}
+  .section h2{font-size:2.4rem;margin-bottom:15px;color:#fff}
+  .section p{font-size:1rem;line-height:1.9;margin-bottom:8px;color:#fff}
   
   .ornament{
     width:120px;height:30px;margin:40px auto;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 120 30'%3E%3Cpath d='M60 0 L70 10 L60 20 L50 10 Z M30 15 L40 10 L30 5 L20 10 Z M90 15 L100 10 L90 5 L80 10 Z' fill='%23d4af37'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 120 30'%3E%3Cpath d='M60 0 L70 10 L60 20 L50 10 Z M30 15 L40 10 L30 5 L20 10 Z M90 15 L100 10 L90 5 L80 10 Z' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat:no-repeat;background-position:center;background-size:contain
   }
   
@@ -56,15 +55,16 @@
     width:190px;height:190px;object-fit:cover;border-radius:50%;
     border:6px solid var(--gold);box-shadow:0 8px 25px rgba(0,0,0,0.15)
   }
-  .couple h3{font-size:1.9rem;margin:12px 0;color:var(--dark-gold)}
+  .couple h3{font-size:1.9rem;margin:12px 0;color:#fff}
+  .couple p{color:#ddd}
   
   .countdown{display:flex;justify-content:center;gap:15px;margin:35px 0;flex-wrap:wrap}
   .countdown div{
-    background:#fff;padding:18px 22px;border-radius:12px;min-width:85px;
-    border:2px solid var(--gold);box-shadow:0 5px 15px rgba(0,0,0,0.08)
+    background:rgba(255,255,255,0.1);padding:18px 22px;border-radius:12px;min-width:85px;
+    border:2px solid var(--gold);box-shadow:0 5px 15px rgba(0,0,0,0.3);backdrop-filter:blur(10px)
   }
-  .countdown span{font-size:2.2rem;font-weight:700;color:var(--dark-gold);display:block}
-  .countdown small{font-size:0.8rem;color:var(--brown)}
+  .countdown span{font-size:2.2rem;font-weight:700;color:var(--gold);display:block}
+  .countdown small{font-size:0.8rem;color:#ddd}
   
   .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:40px}
   .gallery img{
@@ -80,7 +80,7 @@
   
   .footer-ornament{
     margin-top:60px;padding-top:40px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 200 40'%3E%3Cpath d='M100 0 Q120 20 100 40 Q80 20 100 0 M50 20 Q70 10 90 20 Q70 30 50 20 M150 20 Q170 10 190 20 Q170 30 150 20' fill='none' stroke='%23d4af37' stroke-width='2'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 200 40'%3E%3Cpath d='M100 0 Q120 20 100 40 Q80 20 100 0 M50 20 Q70 10 90 20 Q70 30 50 20 M150 20 Q170 10 190 20 Q170 30 150 20' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
     background-repeat:no-repeat;background-position:center;background-size:200px 40px
   }
 
@@ -177,18 +177,18 @@
   
   <div class="footer-ornament" data-aos="fade-up"></div>
   <p data-aos="fade-up">Merupakan suatu kebahagiaan dan kehormatan bagi kami,<br>apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
-  <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.6rem;color:var(--dark-gold)">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+  <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.6rem;color:var(--gold)">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
 
   <!-- Icon SVG transparan di bawah -->
   <div class="bottom-icon" data-aos="fade-up" data-aos-delay="200">
-    <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="70" cy="40" r="35" stroke="#d4af37" stroke-width="3" fill="none"/>
-      <g fill="#d4af37">
-        <circle cx="58" cy="35" r="8"/>
-        <circle cx="82" cy="35" r="8"/>
-        <path d="M58 45 Q58 55 70 55 Q82 55 82 45" stroke="#d4af37" stroke-width="2" fill="none"/>
+    <svg width="160" height="100" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="45" r="40" stroke="#fff" stroke-width="4" fill="none"/>
+      <g fill="#fff">
+        <circle cx="66" cy="40" r="9"/>
+        <circle cx="94" cy="40" r="9"/>
+        <path d="M66 50 Q66 62 80 62 Q94 62 94 50" stroke="#fff" stroke-width="3" fill="none"/>
       </g>
-      <text x="70" y="70" text-anchor="middle" fill="#d4af37" font-family="Poppins" font-size="11" font-weight="500">
+      <text x="80" y="78" text-anchor="middle" fill="#fff" font-family="Poppins" font-size="12" font-weight="500">
         Sukma & Reni
       </text>
     </svg>
@@ -227,4 +227,4 @@ updateCountdown();
 setInterval(updateCountdown,1000);
 </script>
 </body>
-      </html>
+  </html>
