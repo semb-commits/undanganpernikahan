@@ -84,15 +84,10 @@
     background-repeat:no-repeat;background-position:center;background-size:200px 40px
   }
 
-  /* Tambahan untuk gambar bawah */
   .bottom-icon{
     margin-top:50px;
     display:flex;
     justify-content:center;
-  }
-  .bottom-icon img{
-    max-width:180px;
-    height:auto;
   }
   
   @media(max-width:600px){
@@ -184,9 +179,19 @@
   <p data-aos="fade-up">Merupakan suatu kebahagiaan dan kehormatan bagi kami,<br>apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
   <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.6rem;color:var(--dark-gold)">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
 
-  <!-- Tambahan gambar transparan di bawah -->
+  <!-- Icon SVG transparan di bawah -->
   <div class="bottom-icon" data-aos="fade-up" data-aos-delay="200">
-    <img src="URL_GAMBAR_TRANSPARAN_LO" alt="Icon">
+    <svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="40" r="35" stroke="#d4af37" stroke-width="3" fill="none"/>
+      <g fill="#d4af37">
+        <circle cx="58" cy="35" r="8"/>
+        <circle cx="82" cy="35" r="8"/>
+        <path d="M58 45 Q58 55 70 55 Q82 55 82 45" stroke="#d4af37" stroke-width="2" fill="none"/>
+      </g>
+      <text x="70" y="70" text-anchor="middle" fill="#d4af37" font-family="Poppins" font-size="11" font-weight="500">
+        Sukma & Reni
+      </text>
+    </svg>
   </div>
 </section>
 
@@ -222,4 +227,4 @@ updateCountdown();
 setInterval(updateCountdown,1000);
 </script>
 </body>
-                                                        </html>
+      </html>
