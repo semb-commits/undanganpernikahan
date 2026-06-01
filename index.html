@@ -83,6 +83,17 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns=N/A viewBox='0 0 200 40'%3E%3Cpath d='M100 0 Q120 20 100 40 Q80 20 100 0 M50 20 Q70 10 90 20 Q70 30 50 20 M150 20 Q170 10 190 20 Q170 30 150 20' fill='none' stroke='%23d4af37' stroke-width='2'/%3E%3C/svg%3E");
     background-repeat:no-repeat;background-position:center;background-size:200px 40px
   }
+
+  /* Tambahan untuk gambar bawah */
+  .bottom-icon{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+  }
+  .bottom-icon img{
+    max-width:180px;
+    height:auto;
+  }
   
   @media(max-width:600px){
     .hero h1{font-size:2.6rem}
@@ -172,6 +183,11 @@
   <div class="footer-ornament" data-aos="fade-up"></div>
   <p data-aos="fade-up">Merupakan suatu kebahagiaan dan kehormatan bagi kami,<br>apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
   <p data-aos="fade-up" data-aos-delay="100" style="margin-top:30px;font-family:'Playfair Display';font-size:1.6rem;color:var(--dark-gold)">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+
+  <!-- Tambahan gambar transparan di bawah -->
+  <div class="bottom-icon" data-aos="fade-up" data-aos-delay="200">
+    <img src="URL_GAMBAR_TRANSPARAN_LO" alt="Icon">
+  </div>
 </section>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -206,4 +222,4 @@ updateCountdown();
 setInterval(updateCountdown,1000);
 </script>
 </body>
- </html>
+                                                        </html>
